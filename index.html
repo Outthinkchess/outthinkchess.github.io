@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Outthink Chess develops stronger chess players and stronger thinkers through chess instruction focused on critical thinking, confidence, focus, calculation, and decision-making."
+    content="Outthink Chess helps students develop chess skill, critical thinking, confidence, focus, problem-solving, and better decision-making."
   />
 
   <style>
@@ -71,13 +71,15 @@
       color: var(--muted);
     }
 
-    /* NAVIGATION */
+    /* =========================
+       NAVIGATION
+       ========================= */
 
     .navbar {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255,255,255,0.97);
+      background: rgba(255, 255, 255, 0.97);
       border-bottom: 1px solid var(--border);
       box-shadow: 0 3px 14px rgba(0,0,0,0.05);
     }
@@ -132,12 +134,15 @@
       background: var(--purple-dark);
     }
 
-    /* HERO */
+    /* =========================
+       HERO
+       ========================= */
 
     .hero {
       min-height: 86vh;
       display: flex;
       align-items: center;
+
       background:
         linear-gradient(
           90deg,
@@ -214,7 +219,9 @@
       background: white;
     }
 
-    /* BENEFITS */
+    /* =========================
+       MORE THAN CHESS
+       ========================= */
 
     .benefits {
       background: var(--purple-light);
@@ -239,7 +246,9 @@
       color: var(--purple);
     }
 
-    /* PROGRAMS */
+    /* =========================
+       PROGRAMS
+       ========================= */
 
     .program-grid {
       display: grid;
@@ -296,7 +305,9 @@
       text-decoration: none;
     }
 
-    /* TRYOUT */
+    /* =========================
+       TRYOUTS
+       ========================= */
 
     .tryout {
       background: var(--purple);
@@ -359,7 +370,9 @@
       font-weight: 800;
     }
 
-    /* ACADEMICS */
+    /* =========================
+       CHESS & ACADEMICS
+       ========================= */
 
     .academics {
       background: var(--off-white);
@@ -414,7 +427,9 @@
       font-size: 1.08rem;
     }
 
-    /* COACH */
+    /* =========================
+       COACH
+       ========================= */
 
     .coach {
       background: white;
@@ -451,7 +466,9 @@
       font-size: 1.07rem;
     }
 
-    /* CONTACT */
+    /* =========================
+       CONTACT
+       ========================= */
 
     .contact {
       background: var(--purple-light);
@@ -492,7 +509,9 @@
       text-decoration: underline;
     }
 
-    /* REGISTER */
+    /* =========================
+       REGISTER
+       ========================= */
 
     .register-section {
       text-align: center;
@@ -527,18 +546,31 @@
       color: var(--purple);
     }
 
-    /* FLOATING OWL */
+    /* =========================
+       SUBTLE OWL WATERMARK
+       ========================= */
 
     .owl-wrap {
       position: fixed;
       right: 18px;
-      top: 35%;
+      top: 38%;
       z-index: 800;
       width: 155px;
       height: 190px;
+
+      /*
+        The owl cannot intercept clicks or interfere
+        with links/buttons underneath it.
+      */
       pointer-events: none;
-      transition: top 0.35s ease;
-      filter: drop-shadow(0 8px 8px rgba(0,0,0,0.15));
+
+      /*
+        10% opacity makes the mascot a very faint
+        watermark rather than an obstruction.
+      */
+      opacity: 0.10;
+
+      filter: drop-shadow(0 6px 8px rgba(0,0,0,0.08));
     }
 
     .owl-chair {
@@ -719,8 +751,20 @@
       bottom: 7px;
       border: 4px solid #5e3c2b;
       background:
-        linear-gradient(45deg, #60428d 25%, transparent 25%, transparent 75%, #60428d 75%),
-        linear-gradient(45deg, #60428d 25%, #ffffff 25%, #ffffff 75%, #60428d 75%);
+        linear-gradient(
+          45deg,
+          #60428d 25%,
+          transparent 25%,
+          transparent 75%,
+          #60428d 75%
+        ),
+        linear-gradient(
+          45deg,
+          #60428d 25%,
+          #ffffff 25%,
+          #ffffff 75%,
+          #60428d 75%
+        );
       background-size: 18px 18px;
       background-position: 0 0, 9px 9px;
       transform: perspective(80px) rotateX(30deg);
@@ -735,7 +779,9 @@
       color: #241b29;
     }
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+       ========================= */
 
     footer {
       background: var(--purple-dark);
@@ -748,7 +794,9 @@
       color: white;
     }
 
-    /* MOBILE */
+    /* =========================
+       TABLET
+       ========================= */
 
     @media (max-width: 900px) {
 
@@ -783,7 +831,15 @@
       .nav-links a {
         font-size: 0.86rem;
       }
+
+      .owl-wrap {
+        opacity: 0.08;
+      }
     }
+
+    /* =========================
+       MOBILE
+       ========================= */
 
     @media (max-width: 680px) {
 
@@ -805,9 +861,16 @@
         width: 105px;
         height: 135px;
         right: 3px;
+        top: 40%;
+
+        /*
+          Even fainter on phones so the mascot
+          never competes with the page content.
+        */
+        opacity: 0.06;
+
         transform: scale(0.72);
         transform-origin: top right;
-        opacity: 0.93;
       }
 
       .tryout-box,
@@ -823,6 +886,7 @@
   <!-- NAVIGATION -->
 
   <nav class="navbar">
+
     <div class="nav-inner">
 
       <a class="logo" href="#home">
@@ -831,17 +895,29 @@
 
       <div class="nav-links">
 
-        <a href="#home">Home</a>
+        <a href="#home">
+          Home
+        </a>
 
-        <a href="#programs">Programs</a>
+        <a href="#programs">
+          Programs
+        </a>
 
-        <a href="#tryouts">Tryouts</a>
+        <a href="#tryouts">
+          Tryouts
+        </a>
 
-        <a href="#academics">Chess & Academics</a>
+        <a href="#academics">
+          Chess & Academics
+        </a>
 
-        <a href="#coach">Coach</a>
+        <a href="#coach">
+          Coach
+        </a>
 
-        <a href="#contact">Contact</a>
+        <a href="#contact">
+          Contact
+        </a>
 
         <a
           class="nav-register"
@@ -855,23 +931,29 @@
       </div>
 
     </div>
+
   </nav>
 
 
-  <!-- FLOATING OWL -->
+  <!-- SUBTLE OWL WATERMARK -->
 
-  <div class="owl-wrap" id="floatingOwl" aria-hidden="true">
+  <div
+    class="owl-wrap"
+    aria-hidden="true"
+  >
 
     <div class="owl-chair"></div>
 
     <div class="owl-body">
 
       <div class="owl-ear-left"></div>
+
       <div class="owl-ear-right"></div>
 
       <div class="owl-face">
 
         <div class="eye left"></div>
+
         <div class="eye right"></div>
 
         <div class="glasses"></div>
@@ -890,14 +972,19 @@
 
     <div class="mini-board"></div>
 
-    <div class="mini-piece">♟</div>
+    <div class="mini-piece">
+      ♟
+    </div>
 
   </div>
 
 
   <!-- HOME -->
 
-  <header class="hero" id="home">
+  <header
+    class="hero"
+    id="home"
+  >
 
     <div class="container">
 
@@ -922,11 +1009,17 @@
           and decision-making.
         </p>
 
-        <a class="button button-primary" href="#tryouts">
+        <a
+          class="button button-primary"
+          href="#tryouts"
+        >
           Try Outthink Chess
         </a>
 
-        <a class="button button-outline" href="#programs">
+        <a
+          class="button button-outline"
+          href="#programs"
+        >
           Explore Programs
         </a>
 
@@ -958,7 +1051,9 @@
 
         <div class="benefit-card">
 
-          <h3>Critical Thinking</h3>
+          <h3>
+            Critical Thinking
+          </h3>
 
           <p>
             Students learn to evaluate positions, compare alternatives,
@@ -970,7 +1065,9 @@
 
         <div class="benefit-card">
 
-          <h3>Focus & Discipline</h3>
+          <h3>
+            Focus & Discipline
+          </h3>
 
           <p>
             Chess rewards patience, concentration, preparation, and the ability
@@ -982,7 +1079,9 @@
 
         <div class="benefit-card">
 
-          <h3>Confidence</h3>
+          <h3>
+            Confidence
+          </h3>
 
           <p>
             Students learn to trust their judgment, take responsibility for decisions,
@@ -994,7 +1093,9 @@
 
         <div class="benefit-card">
 
-          <h3>Strategic Thinking</h3>
+          <h3>
+            Strategic Thinking
+          </h3>
 
           <p>
             Students practice thinking ahead, anticipating consequences,
@@ -1047,7 +1148,10 @@
             pattern recognition, board awareness, and how to think through an entire game.
           </p>
 
-          <a class="contact-details-button" href="#contact">
+          <a
+            class="contact-details-button"
+            href="#contact"
+          >
             Contact for Program Details →
           </a>
 
@@ -1074,7 +1178,10 @@
             planning, opening knowledge, endgames, and practical decision-making.
           </p>
 
-          <a class="contact-details-button" href="#contact">
+          <a
+            class="contact-details-button"
+            href="#contact"
+          >
             Contact for Program Details →
           </a>
 
@@ -1102,7 +1209,10 @@
             improvement planning.
           </p>
 
-          <a class="contact-details-button" href="#contact">
+          <a
+            class="contact-details-button"
+            href="#contact"
+          >
             Contact for Program Details →
           </a>
 
@@ -1117,7 +1227,10 @@
 
   <!-- TRYOUTS -->
 
-  <section class="tryout" id="tryouts">
+  <section
+    class="tryout"
+    id="tryouts"
+  >
 
     <div class="container">
 
@@ -1185,7 +1298,10 @@
 
   <!-- CHESS & ACADEMICS -->
 
-  <section class="academics" id="academics">
+  <section
+    class="academics"
+    id="academics"
+  >
 
     <div class="container">
 
@@ -1291,7 +1407,10 @@
 
   <!-- COACH -->
 
-  <section class="coach" id="coach">
+  <section
+    class="coach"
+    id="coach"
+  >
 
     <div class="container">
 
@@ -1355,7 +1474,10 @@
 
   <!-- CONTACT -->
 
-  <section class="contact" id="contact">
+  <section
+    class="contact"
+    id="contact"
+  >
 
     <div class="container">
 
@@ -1376,7 +1498,9 @@
 
         <div class="contact-option">
 
-          <strong>Phone:</strong>
+          <strong>
+            Phone:
+          </strong>
 
           <br />
 
@@ -1388,7 +1512,9 @@
 
         <div class="contact-option">
 
-          <strong>Email:</strong>
+          <strong>
+            Email:
+          </strong>
 
           <br />
 
@@ -1469,33 +1595,6 @@
     © 2026 Outthink Chess. All rights reserved.
 
   </footer>
-
-
-  <!-- OWL SCROLL BEHAVIOR -->
-
-  <script>
-    const owl = document.getElementById("floatingOwl");
-
-    window.addEventListener("scroll", function () {
-
-      const documentHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-
-      if (documentHeight <= 0) return;
-
-      const scrollPercentage =
-        window.scrollY / documentHeight;
-
-      const minTop = 22;
-      const maxTop = 65;
-
-      const newTop =
-        minTop + (maxTop - minTop) * scrollPercentage;
-
-      owl.style.top = newTop + "%";
-
-    });
-  </script>
 
 </body>
 </html>
